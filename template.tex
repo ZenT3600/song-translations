@@ -1,14 +1,15 @@
 \usepackage{xeCJK}
-\usepackage{tikz}
+\usepackage{xcolor}
 \usepackage{polyglossia}
 \usepackage{newunicodechar}
 \usepackage{geometry}
+\usepackage{ragged2e}
+
 \geometry{
 a4paper,
 top=20mm,
 bottom=20mm,
 }
-
 \setotherlanguage{sanskrit}
 \setCJKmainfont{Yu Gothic Light}
 \newfontfamily\symbolfont{DejaVu Sans Mono}
@@ -28,3 +29,11 @@ bottom=20mm,
 	\def\par{~\\}
 	\obeylines
 	}{}
+
+% ----------
+\newcommand{\tlnote}[1]{
+	\footnotesize
+	\hspace*{\fill}
+	\textcolor{gray}{#1}
+	\normalsize
+	}
