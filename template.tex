@@ -1,6 +1,13 @@
 \usepackage{xeCJK}
+\usepackage{tikz}
 \usepackage{polyglossia}
 \usepackage{newunicodechar}
+\usepackage{geometry}
+\geometry{
+a4paper,
+top=20mm,
+bottom=20mm,
+}
 
 \setotherlanguage{sanskrit}
 \setCJKmainfont{Yu Gothic Light}
@@ -16,3 +23,8 @@
 
 }
 % ----------
+\newenvironment{lyrics}
+	{
+	\def\par{~\\}
+	\obeylines
+	}{}
