@@ -1,12 +1,15 @@
 cfile := %%f
 outfolder := PDFs
 raws := $(wildcard *.md)
-compile := pandoc $(cfile) -o "$(outfolder)/$(cfile).pdf" --pdf-engine=xelatex -H template.tex --verbose
+pandoc := pandoc --pdf-engine=xelatex -H template.tex --verbose
 
 default: missing
 
+%.md.pdf: %.md
+	$(pandoc) -o "$(outfolder)/$@" $<
+
 missing: $(raws)
-	for $(cfile) in ($(raws)) do if not exist "$(outfolder)/$(cfile).pdf" ($(compile))
+	for $(cfile) in ($(raws)) do if not exist "$(outfolder)/$(cfile).pdf" (make $(cfile).pdf)
 
 all: $(raws)
-	for $(cfile) in ($(raws)) do $(compile)
+	for $(cfile) in ($(raws)) do make $(cfile)
