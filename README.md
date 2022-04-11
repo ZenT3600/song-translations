@@ -11,4 +11,4 @@ Non aspettarti niente di straordinario, non sono un traduttore, lo faccio per di
 Dipende
 È una canzone che conosco? Si
 Altrimenti non credo
-Giusto per essere sicuro, manda un messaggio nella tab [Issues](https://github.com/ZenT3600/song-translations) e vedrò di rispondere quando ho tempo
+Giusto per essere sicuro, manda un messaggio nella tab [Issues](https://github.com/ZenT3600/song-translations/issues) e vedrò di rispondere quando ho tempo
