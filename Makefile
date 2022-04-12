@@ -4,7 +4,7 @@ readmemd := README.md
 placeholder := xyzSONGSCOUNTxyz
 raws := $(wildcard *.md)
 pandoc := pandoc --pdf-engine=xelatex -H template.tex --verbose
-ccreadme := sed 's/$(placeholder)/$(shell expr $(words $(raws)) - 1)/'
+ccreadme := sed 's/$(placeholder)/$(words $(filter-out $(readmemd), $(raws)))/'
 
 default: missing
 
