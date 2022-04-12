@@ -2,11 +2,11 @@ cfile := %%f
 outfolder := PDFs
 readmemd := README.md
 placeholder := xyzSONGSCOUNTxyz
-raws := $(wildcard *.md)
+raws := $(filter-out $(readmemd), $(wildcard *.md))
 pandoc := pandoc --pdf-engine=xelatex -H template.tex --verbose
-ccreadme := sed 's/$(placeholder)/$(words $(filter-out $(readmemd), $(raws)))/'
+ccreadme := sed 's/$(placeholder)/$(words $(raws))/'
 
-default: missing
+default: readme
 
 readme: $(readmemd).og
 	$(ccreadme) $< > $(readmemd)
@@ -15,8 +15,5 @@ readme: $(readmemd).og
 	$(pandoc) -o "$(outfolder)/$@" $<
 	make readme
 
-missing: $(raws)
-	for $(cfile) in ($(raws)) do if not exist "$(outfolder)/$(cfile).pdf" (make $(cfile).pdf)
-
 all: $(raws)
-	for $(cfile) in ($(raws)) do make $(cfile).pdf
+	@for f in $(raws); do make $${f}.pdf; done
