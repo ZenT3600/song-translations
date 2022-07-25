@@ -19,4 +19,4 @@ all: $(raws)
 	@for f in $(raws); do make $${f}.pdf; done
 
 spell: $(raws)
-	aspell check $(f) -l it --mode tex --dont-backup
+	aspell check $(f) --lang it --mode tex --dont-backup
