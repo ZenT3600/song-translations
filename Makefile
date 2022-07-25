@@ -17,3 +17,6 @@ readme: $(readmemd).og
 
 all: $(raws)
 	@for f in $(raws); do make $${f}.pdf; done
+
+spell: $(raws)
+	aspell check $(f) -l it --mode tex --dont-backup
