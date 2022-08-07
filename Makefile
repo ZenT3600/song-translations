@@ -22,7 +22,7 @@ all: $(raws)
 
 spell: $(raws)
 	rm "$(f).bak" || echo
-	$(eval SELECTION := $(shell hunspell -t -u -d it_IT,en_US "$(f)" | uniq | fzf --preview-window wrap --preview="echo {} | cut -c6- | sed 's/:.*//' | xargs -If sed -n fp \"$(f)\""))
+	$(eval SELECTION := $(shell hunspell -t -u -d it_IT,en_US "$(f)" | uniq | fzf --preview-window wrap --preview="echo {} | cut -c6- | sed 's/:.*//' | xargs -I{} sed -n {}p \"$(f)\""))
 	$(eval LINE := $(shell echo "$(SELECTION)" | cut -c6- | sed 's/:.*//'))
 	$(eval WORDS := $(shell echo "$(SELECTION)" | sed 's/.*: //'))
 	$(eval Wi := $(shell echo "$(WORDS)" | sed 's/ -> .*//'))
