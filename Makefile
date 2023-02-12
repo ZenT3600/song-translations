@@ -17,6 +17,9 @@ readme: $(readmemd).og
 	$(pandoc) -o "$(outfolder)/$@" $<
 	make readme
 
+%.md.extra.pdf: %.md.extra
+	$(pandoc) -o "$(outfolder)/$@" $<
+
 all: $(raws)
 	@for f in $(raws); do make $${f}.pdf; done
 
