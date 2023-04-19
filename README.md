@@ -1,7 +1,7 @@
 # Song Translations
 > ZenT3600
 
-![MarkDown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white) ![TeX](https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=LaTeX&logoColor=white) ![Makefile](https://img.shields.io/badge/Makefile-064F8C?style=for-the-badge&logo=cmake&logoColor=white) ![Songs](https://img.shields.io/badge/Canzoni-888888?style=for-the-badge&logo=spotify&logoColor=white&label=35)
+![MarkDown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white) ![TeX](https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=LaTeX&logoColor=white) ![Makefile](https://img.shields.io/badge/Makefile-064F8C?style=for-the-badge&logo=cmake&logoColor=white) ![Songs](https://img.shields.io/badge/Canzoni-888888?style=for-the-badge&logo=spotify&logoColor=white&label=36)
 
 ### Cos\'è questo repo?
 
